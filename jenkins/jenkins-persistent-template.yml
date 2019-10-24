@@ -44,17 +44,13 @@ objects:
     kind: PersistentVolumeClaim
     metadata:
       name: ${JENKINS_SERVICE_NAME}
-    labels:
-      billingType: hourly
-      failure-domain.beta.kubernetes.io/region: us-east
-      failure-domain.beta.kubernetes.io/zone: wdc07
     spec:
       accessModes:
         - ReadWriteOnce
       resources:
         requests:
           storage: ${VOLUME_CAPACITY}
-    storageClassName: ibmc-file-bronze
+    storageClassName: glusterfs-storage
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
