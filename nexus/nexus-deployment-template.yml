@@ -36,7 +36,7 @@ objects:
     name: "${NAME}"
   spec:
     accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
     resources:
       requests:
         storage: "${VOLUME_CAPACITY}"
