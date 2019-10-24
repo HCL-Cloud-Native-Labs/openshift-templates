@@ -50,7 +50,7 @@ objects:
       resources:
         requests:
           storage: ${VOLUME_CAPACITY}
-    storageClassName: glusterfs-storage
+      storageClassName: glusterfs-storage
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
