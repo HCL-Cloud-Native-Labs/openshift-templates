@@ -34,6 +34,10 @@ objects:
   apiVersion: v1
   metadata:
     name: "${NAME}"
+    labels:
+      billingType: hourly
+      failure-domain.beta.kubernetes.io/region: us-east
+      failure-domain.beta.kubernetes.io/zone: wdc07
   spec:
     accessModes:
     - ReadWriteOnce
